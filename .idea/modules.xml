@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/design_patterns_assignment_1.iml" filepath="$PROJECT_DIR$/design_patterns_assignment_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1.iml" filepath="$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1_main.iml" group="design_patterns_assignment_1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/design_patterns_assignment_1_test.iml" group="design_patterns_assignment_1" />
     </modules>
   </component>
 </project>
