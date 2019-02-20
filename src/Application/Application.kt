@@ -1,3 +1,7 @@
+package Application
+
+import Notifier.INotifier
+
 class Application(private var notifier: INotifier) {
 
     fun set(notifier: INotifier){
