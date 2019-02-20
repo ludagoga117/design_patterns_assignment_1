@@ -1,3 +1,5 @@
+import ContactInfo.EmailContactInfo
+import ContactInfo.FacebookContactInfo
 import ContactInfo.SMSContactInfo
 import Notifier.INotifier
 import Notifier.Notifier
@@ -58,6 +60,52 @@ class NotifierTests {
 
         mockedUser = User("Fulano de tal", arrayListOf(
                 SMSContactInfo("1234123412")
+        ))
+
+        mockedUser?.let { mockedUser ->
+            val notifier: INotifier = Notifier(
+                    arrayListOf(mockedUser),
+                    mockedEmailService,
+                    mockedSMSService,
+                    mockedFacebookService
+            )
+            notifier.send("Clase de patrones de disenyo")
+        }
+    }
+
+    @Test
+    fun shouldSendMessageThroughFacebook() {
+        val mockedEmailService = mockedEmailService ?: return
+
+        val mockedFacebookService = mockedFacebookService ?: return
+
+        val mockedSMSService = mockedSMSService ?: return
+
+        mockedUser = User("Fulano de tal", arrayListOf(
+                FacebookContactInfo("facebook-user-id-X")
+        ))
+
+        mockedUser?.let { mockedUser ->
+            val notifier: INotifier = Notifier(
+                    arrayListOf(mockedUser),
+                    mockedEmailService,
+                    mockedSMSService,
+                    mockedFacebookService
+            )
+            notifier.send("Clase de patrones de disenyo")
+        }
+    }
+
+    @Test
+    fun shouldSendMessageThroughEmail() {
+        val mockedEmailService = mockedEmailService ?: return
+
+        val mockedFacebookService = mockedFacebookService ?: return
+
+        val mockedSMSService = mockedSMSService ?: return
+
+        mockedUser = User("Fulano de tal", arrayListOf(
+                EmailContactInfo("example.example@example.com")
         ))
 
         mockedUser?.let { mockedUser ->

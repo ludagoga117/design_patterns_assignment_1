@@ -3,7 +3,6 @@ import ContactInfo.FacebookContactInfo
 import ContactInfo.SMSContactInfo
 import Services.*
 import org.junit.After
-import org.junit.Before
 import org.junit.Test
 
 class ServicesTests {
